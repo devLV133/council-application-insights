@@ -1,0 +1,124 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "visual009",
+  "position": {
+    "x": 645,
+    "y": 235,
+    "z": 9,
+    "width": 605,
+    "height": 500,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Application inventory'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#172C48'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Applications"
+                    }
+                  },
+                  "Property": "application"
+                }
+              },
+              "queryRef": "Applications.application",
+              "nativeQueryRef": "application",
+              "displayName": "Application"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Applications"
+                    }
+                  },
+                  "Property": "owner_team"
+                }
+              },
+              "queryRef": "Applications.owner_team",
+              "nativeQueryRef": "owner_team",
+              "displayName": "Owner team"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Applications"
+                    }
+                  },
+                  "Property": "annual_cost_gbp"
+                }
+              },
+              "queryRef": "Applications.annual_cost_gbp",
+              "nativeQueryRef": "annual_cost_gbp",
+              "displayName": "Annual cost gbp"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Applications"
+                    }
+                  },
+                  "Property": "service_count"
+                }
+              },
+              "queryRef": "Applications.service_count",
+              "nativeQueryRef": "service_count",
+              "displayName": "Service count"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

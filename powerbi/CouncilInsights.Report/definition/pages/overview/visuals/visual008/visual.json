@@ -1,0 +1,98 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "visual008",
+  "position": {
+    "x": 30,
+    "y": 235,
+    "z": 8,
+    "width": 590,
+    "height": 260,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Known annual cost by owner (£)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#172C48'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Applications"
+                    }
+                  },
+                  "Property": "owner_team"
+                }
+              },
+              "queryRef": "Applications.owner_team",
+              "nativeQueryRef": "owner_team",
+              "displayName": "Owner team"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Applications"
+                    }
+                  },
+                  "Property": "Known annual cost"
+                }
+              },
+              "queryRef": "Applications.Known annual cost",
+              "nativeQueryRef": "Known annual cost",
+              "displayName": "Known annual cost"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

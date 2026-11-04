@@ -1,0 +1,79 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "visual014",
+  "position": {
+    "x": 820,
+    "y": 100,
+    "z": 14,
+    "width": 430,
+    "height": 120,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "card",
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Applications on expired support'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#172C48'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Applications"
+                    }
+                  },
+                  "Property": "Unsupported applications"
+                }
+              },
+              "queryRef": "Applications.Unsupported applications",
+              "nativeQueryRef": "Unsupported applications",
+              "displayName": "Unsupported applications"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

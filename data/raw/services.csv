@@ -1,0 +1,7 @@
+service_id,service,criticality
+S01,Council Tax,High
+S02,Waste Collections,High
+S03,Housing,High
+S04,Licensing,Medium
+S05,Customer Contact,High
+S06,Community Grants,Medium

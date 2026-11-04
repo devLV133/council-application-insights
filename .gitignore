@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+powerbi/**/.pbi/
+powerbi/**/*.pbix
+powerbi/**/*.abf
+tmp/

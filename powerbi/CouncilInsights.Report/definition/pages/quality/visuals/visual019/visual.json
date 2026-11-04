@@ -1,0 +1,139 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "visual019",
+  "position": {
+    "x": 30,
+    "y": 240,
+    "z": 19,
+    "width": 1220,
+    "height": 450,
+    "tabOrder": 19
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Issue register and next action'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#172C48'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Issues"
+                    }
+                  },
+                  "Property": "app_id"
+                }
+              },
+              "queryRef": "Issues.app_id",
+              "nativeQueryRef": "app_id",
+              "displayName": "App id"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Issues"
+                    }
+                  },
+                  "Property": "application"
+                }
+              },
+              "queryRef": "Issues.application",
+              "nativeQueryRef": "application",
+              "displayName": "Application"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Issues"
+                    }
+                  },
+                  "Property": "owner_team"
+                }
+              },
+              "queryRef": "Issues.owner_team",
+              "nativeQueryRef": "owner_team",
+              "displayName": "Owner team"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Issues"
+                    }
+                  },
+                  "Property": "issue"
+                }
+              },
+              "queryRef": "Issues.issue",
+              "nativeQueryRef": "issue",
+              "displayName": "Issue"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Issues"
+                    }
+                  },
+                  "Property": "action"
+                }
+              },
+              "queryRef": "Issues.action",
+              "nativeQueryRef": "action",
+              "displayName": "Action"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

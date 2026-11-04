@@ -1,0 +1,124 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "visual013",
+  "position": {
+    "x": 30,
+    "y": 440,
+    "z": 13,
+    "width": 760,
+    "height": 300,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Technology lifecycle'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#172C48'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Technologies"
+                    }
+                  },
+                  "Property": "technology"
+                }
+              },
+              "queryRef": "Technologies.technology",
+              "nativeQueryRef": "technology",
+              "displayName": "Technology"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Technologies"
+                    }
+                  },
+                  "Property": "support_end"
+                }
+              },
+              "queryRef": "Technologies.support_end",
+              "nativeQueryRef": "support_end",
+              "displayName": "Support end"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Technologies"
+                    }
+                  },
+                  "Property": "support_status"
+                }
+              },
+              "queryRef": "Technologies.support_status",
+              "nativeQueryRef": "support_status",
+              "displayName": "Support status"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Technologies"
+                    }
+                  },
+                  "Property": "applications"
+                }
+              },
+              "queryRef": "Technologies.applications",
+              "nativeQueryRef": "applications",
+              "displayName": "Applications"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

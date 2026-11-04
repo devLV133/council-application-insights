@@ -1,0 +1,10 @@
+app_id,application,owner_team,issue,action
+A03,Revenue Desk,Revenue Systems,Stale review,Review with the recorded owner
+A04,Permit Portal,Unassigned,Missing owner,Assign an accountable team
+A05,Legacy Register,Housing Systems,Stale review,Review with the recorded owner
+A10,Grants Manager,Unassigned,Missing owner,Assign an accountable team
+A10,Grants Manager,Unassigned,Missing annual cost,Confirm annual cost with Finance
+A10,Grants Manager,Unassigned,Missing review date,Review the application record
+A11,Case Archive,Housing Systems,Stale review,Review with the recorded owner
+A11,Case Archive,Housing Systems,Unknown support end date,Verify support dates with the supplier
+A12,Web Forms,Digital Platforms,Missing service mapping,Confirm which service uses this application

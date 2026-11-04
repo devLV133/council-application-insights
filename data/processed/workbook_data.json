@@ -1,0 +1,518 @@
+{
+  "portfolio": [
+    {
+      "app_id": "A01",
+      "application": "Resident Hub",
+      "owner_team": "Digital Platforms",
+      "annual_cost_gbp": 84000,
+      "last_reviewed": "2026-09-10",
+      "service_count": 6,
+      "dependent_apps": 1,
+      "missing_owner": 0,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 0,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 0
+    },
+    {
+      "app_id": "A02",
+      "application": "Contact Manager",
+      "owner_team": "Customer Operations",
+      "annual_cost_gbp": 120000,
+      "last_reviewed": "2026-10-20",
+      "service_count": 1,
+      "dependent_apps": 2,
+      "missing_owner": 0,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 0,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 0
+    },
+    {
+      "app_id": "A03",
+      "application": "Revenue Desk",
+      "owner_team": "Revenue Systems",
+      "annual_cost_gbp": 160000,
+      "last_reviewed": "2026-04-01",
+      "service_count": 1,
+      "dependent_apps": 0,
+      "missing_owner": 0,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 1,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 1
+    },
+    {
+      "app_id": "A04",
+      "application": "Permit Portal",
+      "owner_team": "Unassigned",
+      "annual_cost_gbp": 72000,
+      "last_reviewed": "2026-10-15",
+      "service_count": 1,
+      "dependent_apps": 0,
+      "missing_owner": 1,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 0,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 0
+    },
+    {
+      "app_id": "A05",
+      "application": "Legacy Register",
+      "owner_team": "Housing Systems",
+      "annual_cost_gbp": 48000,
+      "last_reviewed": "2025-12-01",
+      "service_count": 1,
+      "dependent_apps": 0,
+      "missing_owner": 0,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 1,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 1
+    },
+    {
+      "app_id": "A06",
+      "application": "Collection Scheduler",
+      "owner_team": "Environmental Services",
+      "annual_cost_gbp": 36000,
+      "last_reviewed": "2026-08-01",
+      "service_count": 1,
+      "dependent_apps": 0,
+      "missing_owner": 0,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 0,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 0
+    },
+    {
+      "app_id": "A07",
+      "application": "Document Store",
+      "owner_team": "Digital Platforms",
+      "annual_cost_gbp": 65000,
+      "last_reviewed": "2026-07-01",
+      "service_count": 4,
+      "dependent_apps": 5,
+      "missing_owner": 0,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 0,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 0
+    },
+    {
+      "app_id": "A08",
+      "application": "Payment Gateway",
+      "owner_team": "Revenue Systems",
+      "annual_cost_gbp": 54000,
+      "last_reviewed": "2026-10-01",
+      "service_count": 2,
+      "dependent_apps": 4,
+      "missing_owner": 0,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 0,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 0
+    },
+    {
+      "app_id": "A09",
+      "application": "Reporting Suite",
+      "owner_team": "Customer Operations",
+      "annual_cost_gbp": 42000,
+      "last_reviewed": "2026-10-18",
+      "service_count": 1,
+      "dependent_apps": 0,
+      "missing_owner": 0,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 0,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 0
+    },
+    {
+      "app_id": "A10",
+      "application": "Grants Manager",
+      "owner_team": "Unassigned",
+      "annual_cost_gbp": null,
+      "last_reviewed": null,
+      "service_count": 1,
+      "dependent_apps": 0,
+      "missing_owner": 1,
+      "missing_cost": 1,
+      "missing_review": 1,
+      "stale_review": 0,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 0
+    },
+    {
+      "app_id": "A11",
+      "application": "Case Archive",
+      "owner_team": "Housing Systems",
+      "annual_cost_gbp": 30000,
+      "last_reviewed": "2026-04-15",
+      "service_count": 1,
+      "dependent_apps": 0,
+      "missing_owner": 0,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 1,
+      "future_review": 0,
+      "missing_service": 0,
+      "missing_technology": 0,
+      "unknown_support": 1,
+      "unsupported_technology": 0
+    },
+    {
+      "app_id": "A12",
+      "application": "Web Forms",
+      "owner_team": "Digital Platforms",
+      "annual_cost_gbp": 24000,
+      "last_reviewed": "2026-10-25",
+      "service_count": 0,
+      "dependent_apps": 0,
+      "missing_owner": 0,
+      "missing_cost": 0,
+      "missing_review": 0,
+      "stale_review": 0,
+      "future_review": 0,
+      "missing_service": 1,
+      "missing_technology": 0,
+      "unknown_support": 0,
+      "unsupported_technology": 0
+    }
+  ],
+  "quality_issues": [
+    {
+      "app_id": "A03",
+      "application": "Revenue Desk",
+      "owner_team": "Revenue Systems",
+      "issue": "Stale review",
+      "action": "Review with the recorded owner"
+    },
+    {
+      "app_id": "A04",
+      "application": "Permit Portal",
+      "owner_team": "Unassigned",
+      "issue": "Missing owner",
+      "action": "Assign an accountable team"
+    },
+    {
+      "app_id": "A05",
+      "application": "Legacy Register",
+      "owner_team": "Housing Systems",
+      "issue": "Stale review",
+      "action": "Review with the recorded owner"
+    },
+    {
+      "app_id": "A10",
+      "application": "Grants Manager",
+      "owner_team": "Unassigned",
+      "issue": "Missing owner",
+      "action": "Assign an accountable team"
+    },
+    {
+      "app_id": "A10",
+      "application": "Grants Manager",
+      "owner_team": "Unassigned",
+      "issue": "Missing annual cost",
+      "action": "Confirm annual cost with Finance"
+    },
+    {
+      "app_id": "A10",
+      "application": "Grants Manager",
+      "owner_team": "Unassigned",
+      "issue": "Missing review date",
+      "action": "Review the application record"
+    },
+    {
+      "app_id": "A11",
+      "application": "Case Archive",
+      "owner_team": "Housing Systems",
+      "issue": "Stale review",
+      "action": "Review with the recorded owner"
+    },
+    {
+      "app_id": "A11",
+      "application": "Case Archive",
+      "owner_team": "Housing Systems",
+      "issue": "Unknown support end date",
+      "action": "Verify support dates with the supplier"
+    },
+    {
+      "app_id": "A12",
+      "application": "Web Forms",
+      "owner_team": "Digital Platforms",
+      "issue": "Missing service mapping",
+      "action": "Confirm which service uses this application"
+    }
+  ],
+  "dependency_detail": [
+    {
+      "app_id": "A01",
+      "application": "Resident Hub",
+      "depends_on_app_id": "A02",
+      "dependency": "Contact Manager",
+      "dependency_owner": "Customer Operations",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A01",
+      "application": "Resident Hub",
+      "depends_on_app_id": "A07",
+      "dependency": "Document Store",
+      "dependency_owner": "Digital Platforms",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A01",
+      "application": "Resident Hub",
+      "depends_on_app_id": "A08",
+      "dependency": "Payment Gateway",
+      "dependency_owner": "Revenue Systems",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A03",
+      "application": "Revenue Desk",
+      "depends_on_app_id": "A08",
+      "dependency": "Payment Gateway",
+      "dependency_owner": "Revenue Systems",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A04",
+      "application": "Permit Portal",
+      "depends_on_app_id": "A07",
+      "dependency": "Document Store",
+      "dependency_owner": "Digital Platforms",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A04",
+      "application": "Permit Portal",
+      "depends_on_app_id": "A08",
+      "dependency": "Payment Gateway",
+      "dependency_owner": "Revenue Systems",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A05",
+      "application": "Legacy Register",
+      "depends_on_app_id": "A07",
+      "dependency": "Document Store",
+      "dependency_owner": "Digital Platforms",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A06",
+      "application": "Collection Scheduler",
+      "depends_on_app_id": "A01",
+      "dependency": "Resident Hub",
+      "dependency_owner": "Digital Platforms",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A09",
+      "application": "Reporting Suite",
+      "depends_on_app_id": "A02",
+      "dependency": "Contact Manager",
+      "dependency_owner": "Customer Operations",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A10",
+      "application": "Grants Manager",
+      "depends_on_app_id": "A07",
+      "dependency": "Document Store",
+      "dependency_owner": "Digital Platforms",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A11",
+      "application": "Case Archive",
+      "depends_on_app_id": "A07",
+      "dependency": "Document Store",
+      "dependency_owner": "Digital Platforms",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    },
+    {
+      "app_id": "A12",
+      "application": "Web Forms",
+      "depends_on_app_id": "A08",
+      "dependency": "Payment Gateway",
+      "dependency_owner": "Revenue Systems",
+      "dependency_unsupported": 0,
+      "dependency_unknown_support": 0
+    }
+  ],
+  "service_exposure": [
+    {
+      "service_id": "S01",
+      "service": "Council Tax",
+      "criticality": "High",
+      "applications": 4,
+      "unsupported_apps": 1,
+      "unowned_apps": 0,
+      "unknown_support_apps": 0
+    },
+    {
+      "service_id": "S02",
+      "service": "Waste Collections",
+      "criticality": "High",
+      "applications": 2,
+      "unsupported_apps": 0,
+      "unowned_apps": 0,
+      "unknown_support_apps": 0
+    },
+    {
+      "service_id": "S03",
+      "service": "Housing",
+      "criticality": "High",
+      "applications": 4,
+      "unsupported_apps": 1,
+      "unowned_apps": 0,
+      "unknown_support_apps": 1
+    },
+    {
+      "service_id": "S04",
+      "service": "Licensing",
+      "criticality": "Medium",
+      "applications": 4,
+      "unsupported_apps": 0,
+      "unowned_apps": 1,
+      "unknown_support_apps": 0
+    },
+    {
+      "service_id": "S05",
+      "service": "Customer Contact",
+      "criticality": "High",
+      "applications": 3,
+      "unsupported_apps": 0,
+      "unowned_apps": 0,
+      "unknown_support_apps": 0
+    },
+    {
+      "service_id": "S06",
+      "service": "Community Grants",
+      "criticality": "Medium",
+      "applications": 3,
+      "unsupported_apps": 0,
+      "unowned_apps": 1,
+      "unknown_support_apps": 0
+    }
+  ],
+  "technology_exposure": [
+    {
+      "technology_id": "T01",
+      "technology": "Web Runtime Current",
+      "support_end": "2028-12-31",
+      "applications": 6,
+      "support_status": "Supported"
+    },
+    {
+      "technology_id": "T02",
+      "technology": "Database Current",
+      "support_end": "2029-06-30",
+      "applications": 4,
+      "support_status": "Supported"
+    },
+    {
+      "technology_id": "T03",
+      "technology": "Legacy Database",
+      "support_end": "2026-06-30",
+      "applications": 2,
+      "support_status": "Expired"
+    },
+    {
+      "technology_id": "T04",
+      "technology": "Legacy Operating System",
+      "support_end": "2025-12-31",
+      "applications": 1,
+      "support_status": "Expired"
+    },
+    {
+      "technology_id": "T05",
+      "technology": "Managed Integration Service",
+      "support_end": "2028-11-30",
+      "applications": 2,
+      "support_status": "Supported"
+    },
+    {
+      "technology_id": "T06",
+      "technology": "Archive Engine",
+      "support_end": null,
+      "applications": 1,
+      "support_status": "Unknown"
+    }
+  ],
+  "report_context": [
+    {
+      "context_id": 1,
+      "as_of_date": "2026-11-04",
+      "review_cutoff": "2026-05-08",
+      "stale_days": 180
+    }
+  ],
+  "summary": {
+    "as_of_date": "2026-11-04",
+    "stale_days": 180,
+    "applications": 12,
+    "known_annual_cost_gbp": 735000.0,
+    "missing_cost_apps": 1,
+    "unowned_apps": 2,
+    "stale_reviews": 3,
+    "unsupported_apps": 2,
+    "unknown_support_apps": 1,
+    "quality_issues": 9,
+    "apps_with_quality_issues": 6,
+    "quality_pass_rate": 0.5,
+    "direct_dependencies": 12
+  }
+}

@@ -1,0 +1,7 @@
+service_id,service,criticality,applications,unsupported_apps,unowned_apps,unknown_support_apps
+S01,Council Tax,High,4,1,0,0
+S02,Waste Collections,High,2,0,0,0
+S03,Housing,High,4,1,0,1
+S04,Licensing,Medium,4,0,1,0
+S05,Customer Contact,High,3,0,0,0
+S06,Community Grants,Medium,3,0,1,0

@@ -1,0 +1,2 @@
+# Optional. Core analysis and tests use only Python's standard library.
+jsonschema>=4.23,<5

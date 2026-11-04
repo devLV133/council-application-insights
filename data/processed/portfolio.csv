@@ -1,0 +1,13 @@
+app_id,application,owner_team,annual_cost_gbp,last_reviewed,service_count,dependent_apps,missing_owner,missing_cost,missing_review,stale_review,future_review,missing_service,missing_technology,unknown_support,unsupported_technology
+A01,Resident Hub,Digital Platforms,84000,2026-09-10,6,1,0,0,0,0,0,0,0,0,0
+A02,Contact Manager,Customer Operations,120000,2026-10-20,1,2,0,0,0,0,0,0,0,0,0
+A03,Revenue Desk,Revenue Systems,160000,2026-04-01,1,0,0,0,0,1,0,0,0,0,1
+A04,Permit Portal,Unassigned,72000,2026-10-15,1,0,1,0,0,0,0,0,0,0,0
+A05,Legacy Register,Housing Systems,48000,2025-12-01,1,0,0,0,0,1,0,0,0,0,1
+A06,Collection Scheduler,Environmental Services,36000,2026-08-01,1,0,0,0,0,0,0,0,0,0,0
+A07,Document Store,Digital Platforms,65000,2026-07-01,4,5,0,0,0,0,0,0,0,0,0
+A08,Payment Gateway,Revenue Systems,54000,2026-10-01,2,4,0,0,0,0,0,0,0,0,0
+A09,Reporting Suite,Customer Operations,42000,2026-10-18,1,0,0,0,0,0,0,0,0,0,0
+A10,Grants Manager,Unassigned,,,1,0,1,1,1,0,0,0,0,0,0
+A11,Case Archive,Housing Systems,30000,2026-04-15,1,0,0,0,0,1,0,0,0,1,0
+A12,Web Forms,Digital Platforms,24000,2026-10-25,0,0,0,0,0,0,0,1,0,0,0

@@ -1,0 +1,500 @@
+{
+  "name": "CouncilInsights",
+  "compatibilityLevel": 1550,
+  "model": {
+    "culture": "en-GB",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-GB",
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:/council-application-insights/data/processed\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "tables": [
+      {
+        "name": "Applications",
+        "columns": [
+          {
+            "name": "app_id",
+            "dataType": "string",
+            "sourceColumn": "app_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "application",
+            "dataType": "string",
+            "sourceColumn": "application",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "owner_team",
+            "dataType": "string",
+            "sourceColumn": "owner_team",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "annual_cost_gbp",
+            "dataType": "decimal",
+            "sourceColumn": "annual_cost_gbp",
+            "summarizeBy": "none",
+            "formatString": "£#,0"
+          },
+          {
+            "name": "last_reviewed",
+            "dataType": "dateTime",
+            "sourceColumn": "last_reviewed",
+            "summarizeBy": "none",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "service_count",
+            "dataType": "int64",
+            "sourceColumn": "service_count",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dependent_apps",
+            "dataType": "int64",
+            "sourceColumn": "dependent_apps",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "missing_owner",
+            "dataType": "int64",
+            "sourceColumn": "missing_owner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "missing_cost",
+            "dataType": "int64",
+            "sourceColumn": "missing_cost",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "missing_review",
+            "dataType": "int64",
+            "sourceColumn": "missing_review",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "stale_review",
+            "dataType": "int64",
+            "sourceColumn": "stale_review",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "future_review",
+            "dataType": "int64",
+            "sourceColumn": "future_review",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "missing_service",
+            "dataType": "int64",
+            "sourceColumn": "missing_service",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "missing_technology",
+            "dataType": "int64",
+            "sourceColumn": "missing_technology",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "unknown_support",
+            "dataType": "int64",
+            "sourceColumn": "unknown_support",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "unsupported_technology",
+            "dataType": "int64",
+            "sourceColumn": "unsupported_technology",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Applications",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/portfolio.csv\"), [Delimiter=\",\", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Blanks = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Types = Table.TransformColumnTypes(Blanks, {{\"app_id\", type text}, {\"application\", type text}, {\"owner_team\", type text}, {\"annual_cost_gbp\", Currency.Type}, {\"last_reviewed\", type date}, {\"service_count\", Int64.Type}, {\"dependent_apps\", Int64.Type}, {\"missing_owner\", Int64.Type}, {\"missing_cost\", Int64.Type}, {\"missing_review\", Int64.Type}, {\"stale_review\", Int64.Type}, {\"future_review\", Int64.Type}, {\"missing_service\", Int64.Type}, {\"missing_technology\", Int64.Type}, {\"unknown_support\", Int64.Type}, {\"unsupported_technology\", Int64.Type}}, \"en-GB\")",
+                "in",
+                "    Types"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Applications",
+            "expression": "COUNTROWS(Applications)",
+            "formatString": "0"
+          },
+          {
+            "name": "Known annual cost",
+            "expression": "SUM(Applications[annual_cost_gbp])",
+            "formatString": "£#,0"
+          },
+          {
+            "name": "Missing cost",
+            "expression": "SUM(Applications[missing_cost])",
+            "formatString": "0"
+          },
+          {
+            "name": "Unowned applications",
+            "expression": "SUM(Applications[missing_owner])",
+            "formatString": "0"
+          },
+          {
+            "name": "Unsupported applications",
+            "expression": "SUM(Applications[unsupported_technology])",
+            "formatString": "0"
+          },
+          {
+            "name": "Quality issues",
+            "expression": "COALESCE(COUNTROWS(Issues), 0)",
+            "formatString": "0"
+          },
+          {
+            "name": "Applications with issues",
+            "expression": "COALESCE(DISTINCTCOUNT(Issues[app_id]), 0)",
+            "formatString": "0"
+          },
+          {
+            "name": "Quality pass rate",
+            "expression": "DIVIDE([Applications] - [Applications with issues], [Applications])",
+            "formatString": "0.0%"
+          },
+          {
+            "name": "Reporting date",
+            "expression": "MAX(Context[as_of_date])",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Service applications",
+            "expression": "SUM(Services[applications])",
+            "formatString": "0"
+          },
+          {
+            "name": "Expired support apps",
+            "expression": "SUM(Services[unsupported_apps])",
+            "formatString": "0"
+          }
+        ]
+      },
+      {
+        "name": "Issues",
+        "columns": [
+          {
+            "name": "app_id",
+            "dataType": "string",
+            "sourceColumn": "app_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "application",
+            "dataType": "string",
+            "sourceColumn": "application",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "owner_team",
+            "dataType": "string",
+            "sourceColumn": "owner_team",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "issue",
+            "dataType": "string",
+            "sourceColumn": "issue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "action",
+            "dataType": "string",
+            "sourceColumn": "action",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Issues",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/quality_issues.csv\"), [Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Blanks = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Types = Table.TransformColumnTypes(Blanks, {{\"app_id\", type text}, {\"application\", type text}, {\"owner_team\", type text}, {\"issue\", type text}, {\"action\", type text}}, \"en-GB\")",
+                "in",
+                "    Types"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dependencies",
+        "columns": [
+          {
+            "name": "app_id",
+            "dataType": "string",
+            "sourceColumn": "app_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "application",
+            "dataType": "string",
+            "sourceColumn": "application",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "depends_on_app_id",
+            "dataType": "string",
+            "sourceColumn": "depends_on_app_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dependency",
+            "dataType": "string",
+            "sourceColumn": "dependency",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dependency_owner",
+            "dataType": "string",
+            "sourceColumn": "dependency_owner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dependency_unsupported",
+            "dataType": "int64",
+            "sourceColumn": "dependency_unsupported",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dependency_unknown_support",
+            "dataType": "int64",
+            "sourceColumn": "dependency_unknown_support",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dependencies",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/dependency_detail.csv\"), [Delimiter=\",\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Blanks = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Types = Table.TransformColumnTypes(Blanks, {{\"app_id\", type text}, {\"application\", type text}, {\"depends_on_app_id\", type text}, {\"dependency\", type text}, {\"dependency_owner\", type text}, {\"dependency_unsupported\", Int64.Type}, {\"dependency_unknown_support\", Int64.Type}}, \"en-GB\")",
+                "in",
+                "    Types"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Services",
+        "columns": [
+          {
+            "name": "service_id",
+            "dataType": "string",
+            "sourceColumn": "service_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "service",
+            "dataType": "string",
+            "sourceColumn": "service",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "criticality",
+            "dataType": "string",
+            "sourceColumn": "criticality",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "applications",
+            "dataType": "int64",
+            "sourceColumn": "applications",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "unsupported_apps",
+            "dataType": "int64",
+            "sourceColumn": "unsupported_apps",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "unowned_apps",
+            "dataType": "int64",
+            "sourceColumn": "unowned_apps",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "unknown_support_apps",
+            "dataType": "int64",
+            "sourceColumn": "unknown_support_apps",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Services",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/service_exposure.csv\"), [Delimiter=\",\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Blanks = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Types = Table.TransformColumnTypes(Blanks, {{\"service_id\", type text}, {\"service\", type text}, {\"criticality\", type text}, {\"applications\", Int64.Type}, {\"unsupported_apps\", Int64.Type}, {\"unowned_apps\", Int64.Type}, {\"unknown_support_apps\", Int64.Type}}, \"en-GB\")",
+                "in",
+                "    Types"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Technologies",
+        "columns": [
+          {
+            "name": "technology_id",
+            "dataType": "string",
+            "sourceColumn": "technology_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "technology",
+            "dataType": "string",
+            "sourceColumn": "technology",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "support_end",
+            "dataType": "dateTime",
+            "sourceColumn": "support_end",
+            "summarizeBy": "none",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "applications",
+            "dataType": "int64",
+            "sourceColumn": "applications",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "support_status",
+            "dataType": "string",
+            "sourceColumn": "support_status",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Technologies",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/technology_exposure.csv\"), [Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Blanks = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Types = Table.TransformColumnTypes(Blanks, {{\"technology_id\", type text}, {\"technology\", type text}, {\"support_end\", type date}, {\"applications\", Int64.Type}, {\"support_status\", type text}}, \"en-GB\")",
+                "in",
+                "    Types"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Context",
+        "columns": [
+          {
+            "name": "context_id",
+            "dataType": "int64",
+            "sourceColumn": "context_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "as_of_date",
+            "dataType": "dateTime",
+            "sourceColumn": "as_of_date",
+            "summarizeBy": "none",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "review_cutoff",
+            "dataType": "dateTime",
+            "sourceColumn": "review_cutoff",
+            "summarizeBy": "none",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "stale_days",
+            "dataType": "int64",
+            "sourceColumn": "stale_days",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Context",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"/report_context.csv\"), [Delimiter=\",\", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Blanks = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Types = Table.TransformColumnTypes(Blanks, {{\"context_id\", Int64.Type}, {\"as_of_date\", type date}, {\"review_cutoff\", type date}, {\"stale_days\", Int64.Type}}, \"en-GB\")",
+                "in",
+                "    Types"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "Issues_Applications",
+        "fromTable": "Issues",
+        "fromColumn": "app_id",
+        "toTable": "Applications",
+        "toColumn": "app_id",
+        "crossFilteringBehavior": "oneDirection"
+      },
+      {
+        "name": "Dependencies_Applications",
+        "fromTable": "Dependencies",
+        "fromColumn": "app_id",
+        "toTable": "Applications",
+        "toColumn": "app_id",
+        "crossFilteringBehavior": "oneDirection"
+      }
+    ]
+  }
+}

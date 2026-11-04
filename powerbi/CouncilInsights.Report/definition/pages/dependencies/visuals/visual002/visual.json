@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "visual002",
+  "position": {
+    "x": 30,
+    "y": 15,
+    "z": 2,
+    "width": 1220,
+    "height": 65,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "textbox",
+    "visualContainerObjects": {},
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Dependencies and support | Synthetic council portfolio",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "20pt",
+                      "color": "#172C48"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

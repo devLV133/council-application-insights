@@ -1,0 +1,13 @@
+app_id,application,depends_on_app_id,dependency,dependency_owner,dependency_unsupported,dependency_unknown_support
+A01,Resident Hub,A02,Contact Manager,Customer Operations,0,0
+A01,Resident Hub,A07,Document Store,Digital Platforms,0,0
+A01,Resident Hub,A08,Payment Gateway,Revenue Systems,0,0
+A03,Revenue Desk,A08,Payment Gateway,Revenue Systems,0,0
+A04,Permit Portal,A07,Document Store,Digital Platforms,0,0
+A04,Permit Portal,A08,Payment Gateway,Revenue Systems,0,0
+A05,Legacy Register,A07,Document Store,Digital Platforms,0,0
+A06,Collection Scheduler,A01,Resident Hub,Digital Platforms,0,0
+A09,Reporting Suite,A02,Contact Manager,Customer Operations,0,0
+A10,Grants Manager,A07,Document Store,Digital Platforms,0,0
+A11,Case Archive,A07,Document Store,Digital Platforms,0,0
+A12,Web Forms,A08,Payment Gateway,Revenue Systems,0,0

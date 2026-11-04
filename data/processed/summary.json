@@ -1,0 +1,15 @@
+{
+  "as_of_date": "2026-11-04",
+  "stale_days": 180,
+  "applications": 12,
+  "known_annual_cost_gbp": 735000.0,
+  "missing_cost_apps": 1,
+  "unowned_apps": 2,
+  "stale_reviews": 3,
+  "unsupported_apps": 2,
+  "unknown_support_apps": 1,
+  "quality_issues": 9,
+  "apps_with_quality_issues": 6,
+  "quality_pass_rate": 0.5,
+  "direct_dependencies": 12
+}

@@ -1,0 +1,109 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "visual012",
+  "position": {
+    "x": 30,
+    "y": 100,
+    "z": 12,
+    "width": 760,
+    "height": 320,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Direct application dependencies'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#172C48'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dependencies"
+                    }
+                  },
+                  "Property": "application"
+                }
+              },
+              "queryRef": "Dependencies.application",
+              "nativeQueryRef": "application",
+              "displayName": "Application"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dependencies"
+                    }
+                  },
+                  "Property": "dependency"
+                }
+              },
+              "queryRef": "Dependencies.dependency",
+              "nativeQueryRef": "dependency",
+              "displayName": "Dependency"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dependencies"
+                    }
+                  },
+                  "Property": "dependency_owner"
+                }
+              },
+              "queryRef": "Dependencies.dependency_owner",
+              "nativeQueryRef": "dependency_owner",
+              "displayName": "Dependency owner"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

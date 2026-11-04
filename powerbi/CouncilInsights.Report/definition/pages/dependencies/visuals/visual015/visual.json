@@ -1,0 +1,124 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "visual015",
+  "position": {
+    "x": 820,
+    "y": 250,
+    "z": 15,
+    "width": 430,
+    "height": 490,
+    "tabOrder": 15
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Service exposure (direct mappings)'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#172C48'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Services"
+                    }
+                  },
+                  "Property": "service"
+                }
+              },
+              "queryRef": "Services.service",
+              "nativeQueryRef": "service",
+              "displayName": "Service"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Services"
+                    }
+                  },
+                  "Property": "applications"
+                }
+              },
+              "queryRef": "Services.applications",
+              "nativeQueryRef": "applications",
+              "displayName": "Applications"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Services"
+                    }
+                  },
+                  "Property": "unsupported_apps"
+                }
+              },
+              "queryRef": "Services.unsupported_apps",
+              "nativeQueryRef": "unsupported_apps",
+              "displayName": "Unsupported apps"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Services"
+                    }
+                  },
+                  "Property": "unknown_support_apps"
+                }
+              },
+              "queryRef": "Services.unknown_support_apps",
+              "nativeQueryRef": "unknown_support_apps",
+              "displayName": "Unknown support apps"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

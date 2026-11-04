@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.0.0/schema.json",
+  "name": "visual011",
+  "position": {
+    "x": 30,
+    "y": 650,
+    "z": 11,
+    "width": 590,
+    "height": 90,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "textbox",
+    "visualContainerObjects": {},
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Costs exclude unknown values. Shared applications are counted once. Figures are fictional.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "20pt",
+                      "color": "#172C48"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
